@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "rio"
+version = "0.1.0"
+description = "rio using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = ">=0.55.0,<1.0.0" }
+
+
+[tool.poetry.scripts]
+rio = "rio.main:run"
+run_crew = "rio.main:run"
+train = "rio.main:train"
+replay = "rio.main:replay"
+test = "rio.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
